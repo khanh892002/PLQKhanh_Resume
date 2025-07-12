@@ -1,0 +1,91 @@
+{
+    "PersonalInfo": {
+        "FullName": "Phạm Lê Quốc Khánh",
+        "Email": "phamlequockhanh892002@gmail.com",
+        "Mobile": "+8483-6969-131",
+        "Github": "https://github.com/khanh892002/"
+    },
+    "Education": {
+        "School": "University of Science, VNU-HCM",
+        "Degree": "Bachelor of Computer Science",
+        "Major": "Information Security",
+        "GPA": 3.417,
+        "TimePeriod": {
+            "from": "September 2020",
+            "to": "July 2024"
+        }
+    },
+    "Objective": {
+        "short-term": "Gaining hands-on experience and secure a position as a full-time employee within the company",
+        "long-term": "Further expanding on professional skills, acquiring new technologies to contribute to the company with more projects"
+    },
+    "WorkingExp": [
+        {
+            "title": "Collaborator",
+            "office": "BA group's managing office",
+            "timePeriod": {
+                "from": "September 2022",
+                "to": "July 2024"
+            },
+            "addr": "B dormitory, VNU-HCM",
+            "description": [
+                "Assisting with admínistrative office tasks, along with various duties and manual labor",
+                "Checking and Entering (Updating) information, data",
+                "Handling papers",
+                "Receiving pupils",
+                "Logistics works"
+            ]
+        },
+        {
+            "title": "Prompt Engineering and AI's response Evaluator",
+            "office": "Outlier platform",
+            "timePeriod": {
+                "from": "February 2025",
+                "to": "Now"
+            },
+            "addr": "Remote projects",
+            "description": [
+                "Creating prompts that match project's goals and instructions",
+                "Reviewing and evaluating AI's responses based on clarity, relevance and accuracy, with careful attention to instruction following",
+                "Using domain knowledge such as Mathematics and Programming to verify the correctness of claims made in AI responses, and identifying subtle errors or misleading information",
+                "Providing feedback to help improve quality and consitency of models"
+            ]
+        }
+    ],
+    "Projects": [
+        {
+            "title": "",
+            "group": "",
+            "timePeriod": {
+                "from": "",
+                "to": ""
+            },
+            "link": "",
+            "contribution": [
+
+            ],
+            "techStack": [
+
+            ],
+            "deliverables": [
+
+            ]
+        }
+    ],
+    "Skills": {
+        "ProgLangs": {
+            "Proficient": ["C/C++","Python","SQL"],
+            "Intermediate": ["Golang", "Javascript", "ExpressJS", "ReactJS", "PHP", "HTML", "Bash script"]
+        },
+        "Databases": ["Microsoft SQL Server"],
+        "Tools": ["nmap", "Sliver", "Spiderfoot", "Metasploite", "Invoke-Stealth", "Git", "VirtualBox"],
+        "Softskills": ["Self-learning", "Teamwork", "Analytical thinking", "Problem-solving"],
+        "OtherExpertises": ["Mathematics", "Physics", "Prompt Engineering"],
+        "SoftwareDevProcess": ["Agile/Scrum"],
+        "DevIDEs": ["Visual Studio"]
+    },
+    "LangSkills": {
+        "Vietnamese": "Native",
+        "English": "B2 (VSTEP)"
+    }
+}
