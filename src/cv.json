@@ -54,22 +54,56 @@
     ],
     "Projects": [
         {
-            "title": "",
-            "group": "",
-            "timePeriod": {
-                "from": "",
-                "to": ""
-            },
-            "link": "",
+            "title": "Data transfering program in C",
+            "group": "Personal",
+            "timePeriod": { "from": "July 15th 2024", "to": "July 31st 2024" },
+            "link": "https://github.com/khanh892002/simple-data-transfering-program",
             "contribution": [
-
+                "Windows and Linux OS specifized handling",
+                "designing text and file transfering protocols using Sockets",
+                "handling timeout"
             ],
-            "techStack": [
-
+            "techStack": ["Socket","C"],
+            "deliverables": "A server-client program that can transfer messages and files, capable of handling multiple clients simultaneously while limiting the number of connections from a single IP address"
+        },
+        {
+            "title": "Penetration testing tool",
+            "group": "5 members",
+            "timePeriod": { "from": "September 2023", "to": "March 2024" },
+            "link": "https://github.com/trhieung/APT-Cyber-Kill-Chain",
+            "contribution": [
+                "Theoretical research",
+                "research on subtool utilization (including spiderfoot, metasploit, sliver)"
             ],
-            "deliverables": [
-
-            ]
+            "techStack": ["VirtualBox","APT attack methods","metasploite","spiderfoot","sliver","bash script"],
+            "deliverables": "A functioning tool imitating an phising attack exploiting emails upon a target system, scanning potential vulnerabilities and making report"
+        },
+        {
+            "title": "Encrypting and Decrypting C++ program",
+            "group": "3 members",
+            "timePeriod": { "from": "December 2023", "to": "January 2024" },
+            "link": "",
+            "contribution": ["Designing large integer handling objects","Designing user interacting command line console"],
+            "techStack": ["OOP","RSA encryption"],
+            "deliverables": "A simple file encryption/decryption program using RSA method, featuring large int handling and the ability to input or generate key pairs"
+        },
+        {
+            "title": "Blockchain model Implementation",
+            "group": "5 members",
+            "timePeriod": { "from": "November 2023", "to": "December 2023" },
+            "link": "https://github.com/Thehien11/Blockchain_HCMUS",
+            "contribution": ["Implementing Transactions Verification", "Designing front-end user interacting console"],
+            "techStack": ["Golang","Blockchain"],
+            "deliverables": "A Blockchain Golang program with core functionalities, including adding new transactions, displaying transaction details, validating transactions and creating a new blockchain"
+        },
+        {
+            "title": "Simple Google searching integration",
+            "group": "Personal",
+            "timePeriod": { "from": "June 9th 2025", "to": "June 14th 2025" },
+            "link": "https://github.com/khanh892002/simple-searching-API-integration",
+            "contribution": ["Web and API designing on the frontend","Handling request from the frontend and response from SerpAPI","test cases implementing","Deploying source code onto Vercel (frontend) and Render (backend)"],
+            "techStack": ["Javascript","NodeJS","HTML","CSS","Jest","Supertest","Vercel","Render"],
+            "deliverables": "A simple Google searching website using SerpAPI to for Google’s engine and displaying organic results with some simple test cases handled on the server side"
         }
     ],
     "Skills": {
