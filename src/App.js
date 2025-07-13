@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import { PersonalInfo } from './Components/PersonalInfo';
 import { Education } from './Components/Education';
@@ -8,17 +7,18 @@ import { Projects } from './Components/Projects';
 import { Skills } from './Components/Skills';
 import { LanguageSkill } from './Components/LanguageSkill';
 
-//<img src={logo} className="App-logo" alt="logo" />
-function App() {
+async function App() {
+  const reqCV = await fetch('./cv.json');
+  const cv = await reqCV.json();
   return (
     <div className="App">
-      <PersonalInfo />
-      <Education />
-      <Objective />
-      <WorkingExp />
-      <Projects />
-      <Skills />
-      <LanguageSkill />
+      <PersonalInfo data={cv.PersonalInfo}/>
+      <Education data={cv.Education}/>
+      <Objective data={cv.Objective}/>
+      <WorkingExp data={cv.WorkingExp}/>
+      <Projects data={cv.Projects}/>
+      <Skills data={cv.Skills}/>
+      <LanguageSkill data={cv.LangSkills}/>
     </div>
   );
 }

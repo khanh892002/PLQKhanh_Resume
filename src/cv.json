@@ -78,7 +78,7 @@
             "Intermediate": ["Golang", "Javascript", "ExpressJS", "ReactJS", "PHP", "HTML", "Bash script"]
         },
         "Databases": ["Microsoft SQL Server"],
-        "Tools": ["nmap", "Sliver", "Spiderfoot", "Metasploite", "Invoke-Stealth", "Git", "VirtualBox"],
+        "Tools": ["nmap", "Sliver", "Spiderfoot", "Metasploite", "Invoke-Stealth", "Git", "VirtualBox", "WSL"],
         "Softskills": ["Self-learning", "Teamwork", "Analytical thinking", "Problem-solving"],
         "OtherExpertises": ["Mathematics", "Physics", "Prompt Engineering"],
         "SoftwareDevProcess": ["Agile/Scrum"],
