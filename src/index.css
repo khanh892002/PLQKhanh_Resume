@@ -1,13 +1,47 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: cursive;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+div {
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+h2 {
+  margin: 0;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  align-self: center;
+}
+
+hr {
+  border-style: dashed;
+  opacity: 0.25;
+}
+
+.custom-header {
+  margin: 0;
+  border-bottom: 5px solid darkseagreen;
+}
+
+.icon {
+  height: 1em;
+  vertical-align: middle;
+  padding: 0.25em;
+}
+
+.portrait-frame {
+  aspect-ratio: 1;
+  align-self: start;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.job-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
