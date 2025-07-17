@@ -7,9 +7,9 @@ import { Projects } from './Components/Projects';
 import { Skills } from './Components/Skills';
 import { LanguageSkill } from './Components/LanguageSkill';
 
-async function App() {
-  const reqCV = await fetch('./cv.json');
-  const cv = await reqCV.json();
+function App() {
+  const reqCV = fetch('./cv.json');
+  const cv = reqCV.json();
   return (
     <div className="App">
       <PersonalInfo data={cv.PersonalInfo}/>

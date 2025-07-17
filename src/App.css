@@ -1,34 +1,47 @@
-.App {
-  text-align: center;
+body {
+  font-family: cursive;
 }
 
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div {
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h2 {
+  margin: 0;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  align-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+hr {
+  border-style: dashed;
+  opacity: 0.25;
+}
+
+.custom-header {
+  margin: 0;
+  border-bottom: 5px solid darkseagreen;
+}
+
+.icon {
+  height: 1em;
+  vertical-align: middle;
+  padding: 0.25em;
+}
+
+.portrait-frame {
+  aspect-ratio: 1;
+  align-self: start;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.job-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

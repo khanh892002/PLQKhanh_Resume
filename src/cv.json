@@ -16,8 +16,8 @@
         }
     },
     "Objective": {
-        "short-term": "Gaining hands-on experience and secure a position as a full-time employee within the company",
-        "long-term": "Further expanding on professional skills, acquiring new technologies to contribute to the company with more projects"
+        "shortTerm": "Gaining hands-on experience and secure a position as a full-time employee within the company",
+        "longTerm": "Further expanding on professional skills, acquiring new technologies to contribute to the company with more projects"
     },
     "WorkingExp": [
         {
