@@ -39,6 +39,7 @@ hr {
   align-self: start;
   overflow: hidden;
   border-radius: 50%;
+  max-height: 150px;
 }
 
 .job-info {

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './App.css';
 import { PersonalInfo } from './Components/PersonalInfo';
 import { Education } from './Components/Education';
@@ -7,15 +6,9 @@ import { WorkingExp } from './Components/WorkingExp';
 import { Projects } from './Components/Projects';
 import { Skills } from './Components/Skills';
 import { LanguageSkill } from './Components/LanguageSkill';
+import cv from './cv.json';
 
 function App() {
-  const [cv, setCV] = useState(null);
-  useEffect(() => {
-    fetch("/cv.json")
-    .then((res) => res.json())
-    .then((json) => setCV(json))
-    .catch((err) => console.error("Error: ", err))
-  }, []);
   return (cv) ? (
     <div className="App">
       <PersonalInfo data={cv.PersonalInfo}/>
