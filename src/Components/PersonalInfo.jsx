@@ -10,9 +10,9 @@ export const PersonalInfo = ({data}) => {
             <h1>{data.FullName}</h1>
             {data.Email && <div><img src={mail} className="icon" alt="email-icon" />{data.Email}</div>}
             {data.Mobile && <div><img src={mobile} className="icon" alt="smartphone-icon"/>{data.Mobile}</div>}
-            {data.Github && <div><img src={git} className="icon" alt="github-icon"/>
-            <a href={data.Github} style={{textDecoration: "none", color: "black"}}>
-                {data.Github.substr(data.Github.lastIndexOf('/') + 1)}</a></div>}
+            {data.Github && <div><a href={data.Github}>
+                <img src={git} className="icon" alt="github-icon"/>{data.Github.substr(data.Github.lastIndexOf('/') + 1)}
+            </a></div>}
         </div>
         <div className="portrait-frame">
             <img src={portrait} style={{width:"100%"}} alt="portrait"/>

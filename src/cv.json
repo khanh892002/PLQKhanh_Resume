@@ -58,11 +58,7 @@
             "group": "Personal",
             "timePeriod": { "from": "July 15th 2024", "to": "July 31st 2024" },
             "link": "https://github.com/khanh892002/simple-data-transfering-program",
-            "contribution": [
-                "Windows and Linux OS specifized handling",
-                "designing text and file transfering protocols using Sockets",
-                "handling timeout"
-            ],
+            "contribution": ["Windows and Linux OS specifized handling","designing text and file transfering protocols using Sockets","handling timeout"],
             "techStack": ["Socket","C"],
             "deliverables": "A server-client program that can transfer messages and files, capable of handling multiple clients simultaneously while limiting the number of connections from a single IP address"
         },
@@ -71,10 +67,7 @@
             "group": "5 members",
             "timePeriod": { "from": "September 2023", "to": "March 2024" },
             "link": "https://github.com/trhieung/APT-Cyber-Kill-Chain",
-            "contribution": [
-                "Theoretical research",
-                "research on subtool utilization (including spiderfoot, metasploit, sliver)"
-            ],
+            "contribution": ["Theoretical research","research on subtool utilization (including spiderfoot, metasploit, sliver)"],
             "techStack": ["VirtualBox","APT attack methods","metasploite","spiderfoot","sliver","bash script"],
             "deliverables": "A functioning tool imitating an phising attack exploiting emails upon a target system, scanning potential vulnerabilities and making report"
         },
@@ -109,7 +102,7 @@
     "Skills": {
         "ProgLangs": {
             "Proficient": ["C/C++","Python","SQL"],
-            "Intermediate": ["Golang", "Javascript", "ExpressJS", "ReactJS", "PHP", "HTML", "Bash script"]
+            "Beginner": ["Golang", "Javascript", "ExpressJS", "ReactJS", "PHP", "HTML", "Bash script"]
         },
         "Databases": ["Microsoft SQL Server"],
         "Tools": ["nmap", "Sliver", "Spiderfoot", "Metasploite", "Invoke-Stealth", "Git", "VirtualBox", "WSL"],
