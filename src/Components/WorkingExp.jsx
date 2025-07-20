@@ -11,8 +11,14 @@ export const WorkingExp = ({data}) => {
                 <div className='job-proj-info'>
                     <h2>{item.title + ' - ' + item.office}</h2>
                     <div>
-                        <div><img src={mapPin} className='icon' alt="mapPin-icon"/>{item.addr}</div>
-                        <div><img src={calendar} className='icon' alt="calendar-icon"/>{item.timePeriod.from + ' - ' + item.timePeriod.to}</div>
+                        <div>
+                            <span className='icon-frame'><img src={mapPin} style={{height: "100%"}} alt="mapPin-icon"/></span>
+                            {item.addr}
+                        </div>
+                        <div>
+                            <span className='icon-frame'><img src={calendar} style={{height: "100%"}} alt="calendar-icon"/></span>
+                            {item.timePeriod.from + ' - ' + item.timePeriod.to}
+                        </div>
                     </div>
                 </div>
                 <div>
