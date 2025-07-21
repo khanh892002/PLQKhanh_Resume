@@ -4,7 +4,6 @@ import group from '../assets/icon-group.png';
 import calendar from '../assets/icon-calendar.png';
 
 export const Projects = ({data}) => {
-    console.log(data);
     return <div className="Projects">
         <h1 className='custom-header'>PROJECTS</h1>
         {data.map((item, index, array) => 
@@ -31,7 +30,7 @@ export const Projects = ({data}) => {
                     <div><b>Deliverables:</b> {item.deliverables}</div>
                     <div><b>Tech stacks:</b> {item.techStack.join(', ')}</div>
                     <div><b>Contributions:</b>
-                    <ul>{item.contribution.map(item => <li>{item}</li>)}</ul>
+                    <ul>{item.contribution.map((item, ind) => <li key={ind}>{item}</li>)}</ul>
                     </div>
                 </div>
                 {/* contribution: [str]

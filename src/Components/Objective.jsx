@@ -5,8 +5,8 @@ export const Objective = ({data}) => {
         <h1 className='custom-header'>OBJECTIVE</h1>
         <div className="content">
         <ul>
-            <li>Short term: {data.shortTerm}</li>
-            <li>Long term: {data.longTerm}</li>
+            <li key="short">Short term: {data.shortTerm}</li>
+            <li key="long">Long term: {data.longTerm}</li>
         </ul>
         </div>
     </div>
