@@ -16,9 +16,13 @@ function App() {
     const label = document.querySelector('label.theme-mode');
     const div = document.querySelector('label.theme-mode>div');
     const btn = document.querySelector('.normal-btn');
-    function changeTheme() {[body, label, div, btn].forEach(item => item.classList.toggle('dark-theme', input.checked))};
+    const hbs = document.querySelectorAll('h1,h2,b');
+    function changeTheme() {
+      [body, label, div, btn].forEach(item => item.classList.toggle('dark-theme', input.checked));
+      hbs.forEach(item => item.classList.toggle('dark-theme', input.checked));
+    }
     input.addEventListener('change', changeTheme);
-
+    
     return () => {
       input.removeEventListener('change', changeTheme);
     }

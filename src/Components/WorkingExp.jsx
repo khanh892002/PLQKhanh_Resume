@@ -4,7 +4,7 @@ import mapPin from '../assets/icon-mapPin.png';
 
 export const WorkingExp = ({data}) => {
     return <div className="WorkingExp">
-        <h1 className='custom-header'>WORKING EXPERIENCE</h1>
+        <h1>WORKING EXPERIENCE</h1>
         {data.map((item, index, array) =>
             <div>
             <section className='content'>
@@ -22,7 +22,7 @@ export const WorkingExp = ({data}) => {
                     </div>
                 </div>
                 <div>
-                    Duties and Responsibilites:
+                    <b>Duties and Responsibilites:</b>
                     <ul>
                         {item.description.map((it, ind) => <li key={ind}>{it}</li>)}
                     </ul>

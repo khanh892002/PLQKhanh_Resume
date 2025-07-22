@@ -5,7 +5,7 @@ import calendar from '../assets/icon-calendar.png';
 
 export const Projects = ({data}) => {
     return <div className="Projects">
-        <h1 className='custom-header'>PROJECTS</h1>
+        <h1>PROJECTS</h1>
         {data.map((item, index, array) => 
             <div>
             <div className='content'>

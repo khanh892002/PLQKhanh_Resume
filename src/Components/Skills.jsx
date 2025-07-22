@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Skills = ({data}) => {
     return <div className="Skills">
-        <h1 className="custom-header">SKILLS</h1>
+        <h1>SKILLS</h1>
         <div className="content">
         <div>
             <b>Programming languages:</b>

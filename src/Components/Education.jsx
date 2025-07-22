@@ -6,7 +6,7 @@ import score from '../assets/icon-score.png';
 
 export const Education = ({data}) => {
     return <div className="Education">
-        <h1 className='custom-header'>EDUCATION</h1>
+        <h1>EDUCATION</h1>
         <div className="content">
         <div>
             <span className="icon-frame"><img src={mapPin} style={{height: "100%"}} alt="mapPin-icon"/></span>
