@@ -8,7 +8,7 @@ import leetcode from '../assets/icon-leetcode.png';
 export const PersonalInfo = ({data}) => {
     return <div className="PersonalInfo" style={{display:"grid", gridTemplateColumns: "4fr 1fr"}}>
         <div>
-            <h1 style={{marginBottom: "1em"}}>{data.FullName}</h1>
+            <h1 style={{marginBottom: ".5em"}}>{data.FullName}</h1>
             {data.Email && <div>
                 <span className="icon-frame"><img src={mail} style={{height: "100%"}} alt="email-icon" /></span>
                 {data.Email}

@@ -28,7 +28,6 @@ body.dark-theme {
   font-family: MonaspaceNeon;
   background-color: var(--dark-bg);
   color: #d1d5db;
-  font-size: smaller;
 }
 
 label.theme-mode {
@@ -176,17 +175,28 @@ button.dark-theme:active {
   border-color: var(--dark-theme);
 }
 
+.Skills>.content>div:not(:last-child) {
+  margin-bottom: .5em;
+}
+
 .checkBox-layout {
   display: grid;
   grid-template-columns: auto auto;
+}
+
+.App {
+  min-width: 640px;
+  max-width: 750px;
 }
 
 .App > div {
   margin-bottom: 1em;
 }
 
-#root {
+#darken-layout {
+  position: fixed;
+  display: grid;
   place-items: center;
-  min-width: 640px;
-  max-width: 750px;
+  height: 100%; width: 100%;
+  background-color: rgba(0,0,0,.5);
 }

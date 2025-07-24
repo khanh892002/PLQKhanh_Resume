@@ -31,10 +31,24 @@ function App() {
     input.addEventListener('change', changeTheme);
     
     // setting download button behaviour
-    
+    // clicking on the download copy button: div with darken-layout div appear
+    const downBtn = document.getElementById('download-btn');
+    const divForDarkLayout = document.querySelector('.App>div:last-child');
+    function clickDownBtn () {
+      divForDarkLayout.hidden = false;
+    }
+    downBtn.addEventListener('click', clickDownBtn);
+
+    // clicking not on #popup and #down-file-btn: close the div with darken-layout div
+    const darkLayout = document.getElementById('darken-layout');
+    function clickDarkLayout() {
+      divForDarkLayout.hidden = true;
+    }
+    darkLayout.addEventListener('click', clickDarkLayout);
 
     return () => {
       input.removeEventListener('change', changeTheme);
+      darkLayout.removeEventListener('click', clickDarkLayout);
     }
   }, []);
     
@@ -50,10 +64,12 @@ function App() {
       <Skills data={cv.Skills}/>
       <LanguageSkill data={cv.LangSkills}/>
 
-      <button id="download-btn">Download a pdf copy</button>
-      <div hidden>
-
-        <button id="down-file-btn">Download PDF CV</button>
+      <button id="download-btn">Make a pdf copy</button>
+      <div style={{position:"absolute", top: "0", left: "0"}} hidden>
+        <div id='darken-layout'>
+          <div id="popup"></div>
+          <button id="down-file-btn">Download PDF file</button>
+        </div>
       </div>
     </div>
   ) : <div>Loading...</div>;
