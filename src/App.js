@@ -11,6 +11,13 @@ import cv from './cv.json';
 
 function App() {
   useEffect(() => {
+    // set a tags target and rel
+    const As = document.querySelectorAll('a');
+    As.forEach(a => {
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener noreferrer');
+    });
+    
     // setting theme switching feature
     const input = document.querySelector('label.theme-mode>input');
     const body = document.body;
