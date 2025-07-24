@@ -14,7 +14,8 @@
 
 :root {
   --dark-bg: #2c3e50;
-  --dark-theme: darkseagreen;
+  --light-theme: #9fd369;
+  --dark-theme: #8cc052;
 }
 
 body {
@@ -97,23 +98,24 @@ ul {
   margin-bottom: 0;
 }
 
- li:not(:first-child) {
+li:not(:first-child) {
   margin-top: 0.5em;
  }
 
 /* this button will change text and border color, increase in size when hovered on,
 change text color and shrink a little when activated (clicked)*/
-button.normal-btn {
+button {
   background-color: black;
-  color: white;
+  color: var(--light-theme);
+  border-color: var(--light-theme);
   padding: 0.5em 1em;
   border-radius: 0.5em;
   transition: all 0.4s ease-in-out;
 }
-button.normal-btn:hover {
+button:hover {
   transform: translateY(-1px);
 }
-button.normal-btn:active {
+button:active {
   transform: translateY(2px);
 }
 
@@ -135,8 +137,11 @@ button.dark-theme:active {
   height: 1em;
   padding: 0.25em;
   margin: 0.25em 0.25em 0.25em 0;
-  background-color: #d1d5db;
+  background-color: var(--light-theme);
   border-radius: 50%;
+}
+.icon-frame.dark-theme {
+  background-color: var(--dark-theme);
 }
 
 .portrait-frame {
@@ -145,22 +150,35 @@ button.dark-theme:active {
   overflow: hidden;
   border-radius: 50%;
   max-height: 150px;
-  border: 5px solid var(--dark-theme);
+  border: 5px solid var(--light-theme);
+}
+.portrait-frame.dark-theme {
+  border-color: var(--dark-theme);
 }
 
 .job-proj-info {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-areas: 'title info'
+                      'dscrb dscrb';
+  row-gap: 0.5em;
+}
+
+.job-proj-info>div:last-child>div:not(:last-child) {
+  margin-bottom: 0.5em;
 }
 
 .content {
   padding: 10px;
-  border: 5px solid var(--dark-theme);
+  border: 5px solid var(--light-theme);
   border-radius: 10px;
 }
+.content.dark-theme {
+  border-color: var(--dark-theme);
+}
 
-.content > div:not(:last-child), .content > div:not(:first-child) > div:not(:last-child) {
-  margin-bottom: 0.75em;
+.checkBox-layout {
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
 .App > div {

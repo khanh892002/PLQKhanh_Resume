@@ -7,11 +7,12 @@ export const Projects = ({data}) => {
     return <div className="Projects">
         <h1>PROJECTS</h1>
         {data.map((item, index, array) => 
-            <div>
-            <div className='content'>
+        <div>
+            <div className='content checkBox-layout'>
+                <input type="checkbox" style={{margin:"auto 10px auto 0"}} hidden/>
                 <div className="job-proj-info">
-                    <h2>{item.title}</h2>
-                    <div>
+                    <h2 style={{gridArea:"title"}}>{item.title}</h2>
+                    <div style={{gridArea:"info"}}>
                         <div>
                             <span className="icon-frame"><img style={{height:"100%"}} src={group} alt='group-icon' /></span>
                             {item.group}
@@ -25,20 +26,17 @@ export const Projects = ({data}) => {
                             {item.link}
                         </a></div>}
                     </div>
-                </div>
-                <div>
-                    <div><b>Deliverables:</b> {item.deliverables}</div>
-                    <div><b>Tech stacks:</b> {item.techStack.join(', ')}</div>
-                    <div><b>Contributions:</b>
-                    <ul>{item.contribution.map((item, ind) => <li key={ind}>{item}</li>)}</ul>
+                    <div style={{gridArea:"dscrb"}}>
+                        <div><b>Deliverables:</b> {item.deliverables}</div>
+                        <div><b>Tech stacks:</b> {item.techStack.join(', ')}</div>
+                        <div><b>Contributions:</b>
+                        <ul>{item.contribution.map((item, ind) => <li key={ind}>{item}</li>)}</ul>
+                        </div>
                     </div>
                 </div>
-                {/* contribution: [str]
-                 techStack: [str]
-                 deliverables: str */}
             </div>
             {(index !== (array.length - 1)) && <hr/>}
-            </div>
+        </div>
         )}
     </div>
 }
