@@ -104,6 +104,8 @@ li:not(:first-child) {
 /* this button will change text and border color, increase in size when hovered on,
 change text color and shrink a little when activated (clicked)*/
 button {
+  font-size: medium;
+  font-family: inherit;
   background-color: black;
   color: var(--light-theme);
   border-color: var(--light-theme);
@@ -129,6 +131,13 @@ button.dark-theme:hover {
 button.dark-theme:active {
   color: #121212;
   transform: scale(0.98);
+}
+
+button:disabled, button.dark-theme:disabled {
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 .icon-frame {
@@ -184,7 +193,7 @@ button.dark-theme:active {
   grid-template-columns: auto auto;
 }
 
-.App {
+#root {
   min-width: 640px;
   max-width: 750px;
 }

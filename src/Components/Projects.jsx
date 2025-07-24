@@ -9,8 +9,8 @@ export const Projects = ({data}) => {
         {data.map((item, index, array) => 
         <div>
             <div className='content checkBox-layout'>
-                <input type="checkbox" style={{margin:"auto 10px auto 0"}} hidden/>
-                <div className="job-proj-info">
+                <input type="checkbox" style={{margin:"auto 10px auto 0"}} id={'proj' + index}/>
+                <div className="job-proj-info" id={'proj' + index}>
                     <h2 style={{gridArea:"title"}}>{item.title}</h2>
                     <div style={{gridArea:"info"}}>
                         <div>

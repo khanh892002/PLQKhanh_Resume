@@ -110,10 +110,10 @@
         },
         "Databases": ["Microsoft SQL Server"],
         "Tools": ["nmap", "Sliver", "Spiderfoot", "Metasploite", "Invoke-Stealth", "Git", "VirtualBox", "WSL"],
-        "Softskills": ["Self-learning", "Teamwork", "Analytical thinking", "Problem-solving"],
-        "OtherExpertises": ["Mathematics", "Physics", "Prompt Engineering"],
-        "SoftwareDevProcess": ["Agile/Scrum"],
-        "DevIDEs": ["Visual Studio"]
+        "Soft skills": ["Self-learning", "Teamwork", "Analytical thinking", "Problem-solving"],
+        "Other Expertises": ["Mathematics", "Physics", "Prompt Engineering"],
+        "Software Developing Process": ["Agile/Scrum"],
+        "Dev IDEs": ["Visual Studio"]
     },
     "LangSkills": {
         "Vietnamese": "Native",
