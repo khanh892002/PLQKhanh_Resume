@@ -101,8 +101,8 @@ li:not(:first-child) {
   margin-top: 0.5em;
  }
 
-/* this button will change text and border color, increase in size when hovered on,
-change text color and shrink a little when activated (clicked)*/
+/* when hovered, the button will move up a little
+when activated (clicked), the button will move down, imitating a pushed-down button*/
 button {
   font-size: medium;
   font-family: inherit;
@@ -119,7 +119,9 @@ button:hover {
 button:active {
   transform: translateY(2px);
 }
-
+/* in dark theme, text and border color will change base on the theme colors,
+increase in size when hovered on,
+change text color and shrink a little when activated (clicked)*/
 button.dark-theme {
   border: 1px solid var(--dark-theme);
 }

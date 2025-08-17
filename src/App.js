@@ -1,5 +1,6 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import html2pdf from 'html2pdf.js';
 import { PersonalInfo } from './Components/PersonalInfo';
 import { Education } from './Components/Education';
 import { Objective } from './Components/Objective';
@@ -10,6 +11,9 @@ import { LanguageSkill } from './Components/LanguageSkill';
 import cv from './cv.json';
 
 function App() {
+  const [pdfBlob, setPdfBlob] = useState(null);
+  const [pdfUrl, setPdfUrl] = useState(null);
+
   useEffect(() => {
     // set a tags target and rel
     const As = document.querySelectorAll('a');
@@ -32,10 +36,28 @@ function App() {
     
     // setting download button behaviour
     // clicking on the download copy button: div with darken-layout div appear
-    const downBtn = document.getElementById('download-btn');
+    const createPDFBtn = document.getElementById('createPDF-btn');
     const divForDarkLayout = document.querySelector('.App>div:last-child');
-    function clickDownBtn () { divForDarkLayout.hidden = false; }
-    downBtn.addEventListener('click', clickDownBtn);
+    async function clickCreatePDFBtn () {
+      divForDarkLayout.hidden = false;
+      try {
+        const element = document.querySelector('.App');
+        const opt = {
+          margin: 10,
+          filename: 'PLQKhanh_CV.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+        const pdf = await html2pdf().set(opt).from(element).outputPdf('blob');
+        setPdfBlob(pdf);
+        const url = URL.createObjectURL(pdf);
+        setPdfUrl(url);
+
+        document.getElementById('popup').innerHTML = `<iframe title="PDF Preview" src="${url}" style="width:100%; height:600px"></iframe>`
+      } catch (err) { console.error("Error in creating PDF file"); }
+    }
+    createPDFBtn.addEventListener('click', clickCreatePDFBtn);
     
     // clicking on the Cancel button: close the div with darken-layout div
     const cancelBtn = document.getElementById('cancel-download');    
@@ -51,18 +73,20 @@ function App() {
     // if there is not any of the check boxes checked, the download button will be disabled
     const checkBoxes = document.querySelectorAll('.checkBox-layout>input');
     function downloadable() {
-      downBtn.disabled = [...checkBoxes].every(item => !(item.checked));
+      createPDFBtn.disabled = [...checkBoxes].every(item => !(item.checked));
     }
     checkBoxes.forEach(item => item.addEventListener('change', downloadable));
 
     return () => {
+      if (pdfUrl) URL.revokeObjectURL(pdfUrl);
+
       themeToggle.removeEventListener('change', changeTheme);
-      downBtn.removeEventListener('click', clickDownBtn);
+      createPDFBtn.removeEventListener('click', clickCreatePDFBtn);
       darkLayoutDiv.removeEventListener('click', clickDarkLayout);
       cancelBtn.removeEventListener('click', clickCancel);
       checkBoxes.forEach(item => item.removeEventListener('change', downloadable));
     }
-  }, []);
+  }, [pdfUrl]);
     
 
   return (cv) ? (
@@ -76,13 +100,18 @@ function App() {
       <Skills data={cv.Skills}/>
       <LanguageSkill data={cv.LangSkills}/>
       <div style={{textAlign: 'center'}}>
-        <button id="download-btn" disabled>Make a pdf copy</button>
+        <button id="createPDF-btn" disabled>Make a pdf copy</button>
       </div>
       <div style={{position:'absolute', top: '0', left: '0'}} hidden>
         <div id='darken-layout'>
           <div id="popup"></div>
           <div style={{display: 'block'}}>
-            <button id="down-file-btn">Download PDF file</button>
+            {pdfBlob && <button onclick={() => {
+              const a = document.createElement('a');
+              a.href = pdfUrl;
+              a.download = 'PLQKhanh_CV.pdf';
+              a.click();
+            }}>Download PDF file</button>}
             <button id="cancel-download">Cancel</button>  
           </div>
         </div>
