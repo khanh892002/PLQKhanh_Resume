@@ -24,12 +24,11 @@ function App() {
     
     // setting theme switching feature
     const themeToggle = document.querySelector('label.theme-mode>input');
-    const body = document.body;
     const label = document.querySelector('label.theme-mode');
     const div = document.querySelector('label.theme-mode>div');
-    const manyElements = document.querySelectorAll('h1,h2,b,button,.icon-frame,.portrait-frame,.content');
+    const manyElements = document.querySelectorAll('body,h1,h2,b,button,.icon-frame,.portrait-frame,.content');
     function changeTheme() {
-      [body, label, div].forEach(item => item.classList.toggle('dark-theme', themeToggle.checked));
+      [label, div].forEach(item => item.classList.toggle('dark-theme', themeToggle.checked));
       manyElements.forEach(item => item.classList.toggle('dark-theme', themeToggle.checked));
     }
     themeToggle.addEventListener('change', changeTheme);
@@ -37,19 +36,34 @@ function App() {
     // setting download button behaviour
     // clicking on the download copy button: div with darken-layout div appear
     const createPDFBtn = document.getElementById('createPDF-btn');
-    const divForDarkLayout = document.querySelector('.App>div:last-child');
+    const darkLayoutWrapper = document.getElementById('dark-layout-wrapper');
     async function clickCreatePDFBtn () {
-      divForDarkLayout.hidden = false;
+      darkLayoutWrapper.hidden = false;
       try {
-        const element = document.querySelector('.App');
+        const CVContent = document.querySelector('.App');
+
+        // Clone the DOM so we can safely remove unchecked sections without affecting the UI
+        const pdfContent = CVContent.cloneNode(true);
+
+        // Remove unchecked sections based on checkboxes in .checkBox-layout
+        const checkBoxes = document.querySelectorAll('.checkBox-layout>input');
+        checkBoxes.forEach(cb => {
+          if (!cb.checked) {
+            // Prefer an explicit data-target selector on the checkbox, fallback to data-section by id
+            const selector = cb.dataset.target || `[data-section="${cb.id}"]`;
+            pdfContent.querySelectorAll(selector).forEach(node => node.remove());
+          }
+        });
+
         const opt = {
           margin: 10,
           filename: 'PLQKhanh_CV.pdf',
           image: { type: 'jpeg', quality: 0.98 },
-          html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+          // Set backgroundColor here if you want a non-white PDF background
+          html2canvas: { scale: 2, useCORS: true, letterRendering: true, backgroundColor: (themeToggle.checked ? '#2c3e50' : '#fff') },
           jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
-        const pdf = await html2pdf().set(opt).from(element).outputPdf('blob');
+        const pdf = await html2pdf().set(opt).from(pdfContent).outputPdf('blob');
         setPdfBlob(pdf);
         const url = URL.createObjectURL(pdf);
         setPdfUrl(url);
@@ -61,12 +75,12 @@ function App() {
     
     // clicking on the Cancel button: close the div with darken-layout div
     const cancelBtn = document.getElementById('cancel-download');    
-    function clickCancel() { divForDarkLayout.hidden = true; }
+    function clickCancel() { darkLayoutWrapper.hidden = true; }
     cancelBtn.addEventListener('click', clickCancel);
     //clicking on the darkened layout
     const darkLayoutDiv = document.getElementById('darken-layout');
     function clickDarkLayout(e) { 
-      if (e.target === darkLayoutDiv) divForDarkLayout.hidden = true; 
+      if (e.target === darkLayoutDiv) darkLayoutWrapper.hidden = true; 
     }
     darkLayoutDiv.addEventListener('click', clickDarkLayout);
 
@@ -90,8 +104,9 @@ function App() {
     
 
   return (cv) ? (
+    <>
+    <label className='theme-mode'><input type="checkbox"/><div></div></label>
     <div className="App">
-      <label className='theme-mode'><input type="checkbox"/><div></div></label>
       <PersonalInfo data={cv.PersonalInfo}/>
       <Education data={cv.Education}/>
       <Objective data={cv.Objective}/>
@@ -99,24 +114,25 @@ function App() {
       <Projects data={cv.Projects}/>
       <Skills data={cv.Skills}/>
       <LanguageSkill data={cv.LangSkills}/>
-      <div style={{textAlign: 'center'}}>
+    </div>
+    <div style={{textAlign: 'center'}}>
         <button id="createPDF-btn" disabled>Make a pdf copy</button>
-      </div>
-      <div style={{position:'absolute', top: '0', left: '0'}} hidden>
-        <div id='darken-layout'>
-          <div id="popup"></div>
-          <div style={{display: 'block'}}>
-            {pdfBlob && <button onclick={() => {
-              const a = document.createElement('a');
-              a.href = pdfUrl;
+    </div>
+    <div id="dark-layout-wrapper" style={{position:'absolute', top: '0', left: '0'}} hidden>
+      <div id='darken-layout'>
+        <div id="popup"></div>
+        <div style={{display: 'block'}}>
+          {pdfBlob && <button onClick={() => {
+            const a = document.createElement('a');
+            a.href = pdfUrl;
               a.download = 'PLQKhanh_CV.pdf';
-              a.click();
-            }}>Download PDF file</button>}
-            <button id="cancel-download">Cancel</button>  
-          </div>
+            a.click();
+          }}>Download PDF file</button>}
+          <button id="cancel-download">Cancel</button>  
         </div>
       </div>
     </div>
+    </>
   ) : <div>Loading...</div>;
 }
 

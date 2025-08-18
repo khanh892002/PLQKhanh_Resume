@@ -7,7 +7,7 @@ export const WorkingExp = ({data}) => {
         <h1>WORKING EXPERIENCE</h1>
         {data.map((item, index, array) =>
             <div>
-            <section className='content checkBox-layout'>
+            <label className='content checkBox-layout'>
                 <input type="checkbox" style={{margin: "auto 10px auto 0"}} id={'job' + index}/>
                 <div className='job-proj-info' id={'job' + index}>
                     <h2 style={{gridArea:"title"}}>{item.title + ' - ' + item.office}</h2>
@@ -28,7 +28,7 @@ export const WorkingExp = ({data}) => {
                         </ul>
                     </div>
                 </div>
-            </section>
+            </label>
             {(index !== array.length - 1) && <hr />}
             </div>
         )}

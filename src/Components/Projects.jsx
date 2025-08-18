@@ -8,7 +8,7 @@ export const Projects = ({data}) => {
         <h1>PROJECTS</h1>
         {data.map((item, index, array) => 
         <div>
-            <div className='content checkBox-layout'>
+            <label className='content checkBox-layout'>
                 <input type="checkbox" style={{margin:"auto 10px auto 0"}} id={'proj' + index}/>
                 <div className="job-proj-info" id={'proj' + index}>
                     <h2 style={{gridArea:"title"}}>{item.title}</h2>
@@ -34,7 +34,7 @@ export const Projects = ({data}) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </label>
             {(index !== (array.length - 1)) && <hr/>}
         </div>
         )}

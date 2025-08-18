@@ -19,9 +19,9 @@
 }
 
 body {
-  font-family: cursive;
   display: grid;
   place-items: center;
+  font-family: cursive;
   transition: .4s ease-in-out;
 }
 body.dark-theme {
@@ -195,9 +195,14 @@ button:disabled, button.dark-theme:disabled {
   grid-template-columns: auto auto;
 }
 
-#root {
+#root, #popup {
   min-width: 640px;
   max-width: 750px;
+}
+
+#popup {
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .App > div {
