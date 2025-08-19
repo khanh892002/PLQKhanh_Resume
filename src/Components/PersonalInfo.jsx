@@ -11,18 +11,18 @@ export const PersonalInfo = ({data}) => {
         <div>
             <h1 style={{marginBottom: ".5em"}}>{data.FullName}</h1>
             {data.Email && <div>
-                <IconFrame src={mail} alt={'email-icon'} />{data.Email}
-            </div>}
+                <IconFrame src={mail} altTxt={'email-icon'} />{data.Email}
+                </div>}
             {data.Mobile && <div>
-                <IconFrame src={mobile} alt={'smartphone-icon'}/>{data.Mobile}
-            </div>}
+                <IconFrame src={mobile} altTxt={'smartphone-icon'}/>{data.Mobile}
+                </div>}
             {data.Github && <div><a href={data.Github}>
-                <IconFrame src={git} alt={'github-icon'}/>
+                <IconFrame src={git} altTxt={'github-icon'}/>
                 {data.Github.substr(data.Github.lastIndexOf('/') + 1)}
-            </a></div>}
+                </a></div>}
             {data.Leetcode && <div><a href={data.Leetcode.link}>
-                <IconFrame src={leetcode} alt={'leetcode-icon'}/>{data.Leetcode.username}
-            </a></div>}
+                <IconFrame src={leetcode} altTxt={'leetcode-icon'}/>{data.Leetcode.username}
+                </a></div>}
         </div>
         <div className="portrait-frame">
             <img src={portrait} style={{width:"100%"}} alt="portrait"/>

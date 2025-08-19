@@ -14,10 +14,10 @@ export const WorkingExp = ({data}) => {
                     <h2 style={{gridArea:"title"}}>{item.title + ' - ' + item.office}</h2>
                     <div style={{gridArea:"info"}}>
                         <div>
-                            <IconFrame src={mapPin} alt={'mapPin-icon'}/>{item.addr}
+                            <IconFrame src={mapPin} altTxt={'mapPin-icon'}/>{item.addr}
                         </div>
                         <div>
-                            <IconFrame src={calendar} alt={'calendar-icon'}/>{item.timePeriod.from + ' - ' + item.timePeriod.to}
+                            <IconFrame src={calendar} altTxt={'calendar-icon'}/>{item.timePeriod.from + ' - ' + item.timePeriod.to}
                         </div>
                     </div>
                     <div style={{gridArea:"dscrb"}}>

@@ -21,7 +21,7 @@ export const Projects = ({data}) => {
                             <IconFrame src={calendar} altTxt={'calendar-icon'} />{item.timePeriod.from + ' - ' + item.timePeriod.to}
                         </div>
                         {item.link && <div><a href={item.link}>
-                            <IconFrame src={link} alt={'link-icon'} />{item.link}
+                            <IconFrame src={link} altTxt={'link-icon'} />{item.link}
                         </a></div>}
                     </div>
                     <div style={{gridArea:"dscrb"}}>
