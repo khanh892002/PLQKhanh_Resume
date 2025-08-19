@@ -94,6 +94,15 @@
             "deliverables": "A Blockchain Golang program with core functionalities, including adding new transactions, displaying transaction details, validating transactions and creating a new blockchain"
         },
         {
+            "title": "Personal CV builder",
+            "group": "Personal",
+            "timePeriod": { "from": "July 12th 2025", "to": "August 19th 2025" },
+            "link": "https://github.com/khanh892002/PLQKhanh_Resume",
+            "contribution": ["Frontend designing","Implement PDF file creation","Customizable project and work experience selection","Deploying source code onto Vercel"],
+            "techStack": ["Javascript","React","HTML","CSS","Vercel"],
+            "deliverables": ""
+        },
+        {
             "title": "Simple Google searching integration",
             "group": "Personal",
             "timePeriod": { "from": "June 9th 2025", "to": "June 14th 2025" },

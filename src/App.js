@@ -37,39 +37,69 @@ function App() {
     // clicking on the download copy button: div with darken-layout div appear
     const createPDFBtn = document.getElementById('createPDF-btn');
     const darkLayoutWrapper = document.getElementById('dark-layout-wrapper');
+    const popup = document.getElementById('popup');
     async function clickCreatePDFBtn () {
       darkLayoutWrapper.hidden = false;
+      popup.textContent = 'Generating PDF...';
       try {
         const CVContent = document.querySelector('.App');
 
         // Clone the DOM so we can safely remove unchecked sections without affecting the UI
         const pdfContent = CVContent.cloneNode(true);
-
+        pdfContent.style.background = themeToggle.checked ? '#2c3e50' : '#fff';
         // Remove unchecked sections based on checkboxes in .checkBox-layout
-        const checkBoxes = document.querySelectorAll('.checkBox-layout>input');
-        checkBoxes.forEach(cb => {
-          if (!cb.checked) {
-            // Prefer an explicit data-target selector on the checkbox, fallback to data-section by id
-            const selector = cb.dataset.target || `[data-section="${cb.id}"]`;
-            pdfContent.querySelectorAll(selector).forEach(node => node.remove());
+        const workProjDivs = pdfContent.querySelectorAll('.WorkingExp>div, .Projects>div');
+        workProjDivs.forEach((item) => {
+          const checkBox = item.querySelector('label>input');
+          if (checkBox.checked) {
+            checkBox.remove();
+          } else {
+            item.remove();
           }
         });
 
+        const workExp = pdfContent.querySelector('.WorkingExp');
+        if (workExp) {
+          const workDivs = Array.from(workExp.querySelectorAll('div'));
+          if (workDivs.length === 0) workExp.remove();
+          else {
+            const lastWorkDiv = workDivs[workDivs.length - 1];
+            lastWorkDiv?.querySelector('hr')?.remove();
+          }
+        }
+        const proj = pdfContent.querySelector('.Projects');
+        if (proj) {
+          const projDivs = Array.from(proj.querySelectorAll('div'));
+          if (projDivs.length === 0) proj.remove();
+          else {
+            const lastProjDiv = projDivs[projDivs.length - 1];
+            lastProjDiv?.querySelector('hr')?.remove();
+          }
+        }
+
+        const bgWrapper = document.createElement('div');
+        bgWrapper.style.background = themeToggle.checked ? '#2c3e50' : '#fff';
+        bgWrapper.style.padding = '10mm';
+        bgWrapper.appendChild(pdfContent);
         const opt = {
-          margin: 10,
+          margin: 0,
           filename: 'PLQKhanh_CV.pdf',
           image: { type: 'jpeg', quality: 0.98 },
-          // Set backgroundColor here if you want a non-white PDF background
-          html2canvas: { scale: 2, useCORS: true, letterRendering: true, backgroundColor: (themeToggle.checked ? '#2c3e50' : '#fff') },
-          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+          pagebreak: {mode: ['avoid-all']}, //prevent splitting within, Love this
+          html2canvas: { scale: 2, useCORS: true, letterRendering: true},
+          jsPDF: { orientation: 'portrait' }
         };
-        const pdf = await html2pdf().set(opt).from(pdfContent).outputPdf('blob');
+        const pdf = await html2pdf().set(opt).from(bgWrapper).outputPdf('blob');
         setPdfBlob(pdf);
         const url = URL.createObjectURL(pdf);
         setPdfUrl(url);
-
-        document.getElementById('popup').innerHTML = `<iframe title="PDF Preview" src="${url}" style="width:100%; height:600px"></iframe>`
-      } catch (err) { console.error("Error in creating PDF file"); }
+        popup.innerText = '';
+        popup.innerHTML = '';
+        popup.innerHTML = `<iframe title="PDF Preview" src="${url}" style="width:100%; height:600px"></iframe>`
+      } catch (err) {
+        popup.innerText = 'Error in creating file';
+        console.error("Error in creating PDF file");
+      }
     }
     createPDFBtn.addEventListener('click', clickCreatePDFBtn);
     

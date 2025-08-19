@@ -203,6 +203,9 @@ button:disabled, button.dark-theme:disabled {
 #popup {
   padding: 10px;
   border-radius: 10px;
+  border: 1px solid white;
+  background-color: white;
+  text-align: center;
 }
 
 .App > div {

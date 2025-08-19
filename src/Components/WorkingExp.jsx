@@ -1,4 +1,5 @@
 import React from 'react';
+import { IconFrame } from './IconFrame';
 import calendar from '../assets/icon-calendar.png';
 import mapPin from '../assets/icon-mapPin.png';
 
@@ -8,17 +9,15 @@ export const WorkingExp = ({data}) => {
         {data.map((item, index, array) =>
             <div>
             <label className='content checkBox-layout'>
-                <input type="checkbox" style={{margin: "auto 10px auto 0"}} id={'job' + index}/>
-                <div className='job-proj-info' id={'job' + index}>
+                <input type="checkbox" style={{margin: "auto 10px auto 0"}} />
+                <div className='job-proj-info'>
                     <h2 style={{gridArea:"title"}}>{item.title + ' - ' + item.office}</h2>
                     <div style={{gridArea:"info"}}>
                         <div>
-                            <span className='icon-frame'><img src={mapPin} style={{height: "100%"}} alt="mapPin-icon"/></span>
-                            {item.addr}
+                            <IconFrame src={mapPin} alt={'mapPin-icon'}/>{item.addr}
                         </div>
                         <div>
-                            <span className='icon-frame'><img src={calendar} style={{height: "100%"}} alt="calendar-icon"/></span>
-                            {item.timePeriod.from + ' - ' + item.timePeriod.to}
+                            <IconFrame src={calendar} alt={'calendar-icon'}/>{item.timePeriod.from + ' - ' + item.timePeriod.to}
                         </div>
                     </div>
                     <div style={{gridArea:"dscrb"}}>

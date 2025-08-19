@@ -1,4 +1,5 @@
 import React from "react";
+import { IconFrame } from "./IconFrame";
 import portrait from '../assets/portrait.png';
 import git from '../assets/icon-github.png';
 import mail from '../assets/icon-email.png';
@@ -10,20 +11,17 @@ export const PersonalInfo = ({data}) => {
         <div>
             <h1 style={{marginBottom: ".5em"}}>{data.FullName}</h1>
             {data.Email && <div>
-                <span className="icon-frame"><img src={mail} style={{height: "100%"}} alt="email-icon" /></span>
-                {data.Email}
+                <IconFrame src={mail} alt={'email-icon'} />{data.Email}
             </div>}
             {data.Mobile && <div>
-                <span className="icon-frame"><img src={mobile} style={{height: "100%"}} alt="smartphone-icon"/></span>
-                {data.Mobile}
+                <IconFrame src={mobile} alt={'smartphone-icon'}/>{data.Mobile}
             </div>}
             {data.Github && <div><a href={data.Github}>
-                <span className="icon-frame"><img src={git} style={{height: "100%"}} alt="github-icon"/></span>
+                <IconFrame src={git} alt={'github-icon'}/>
                 {data.Github.substr(data.Github.lastIndexOf('/') + 1)}
             </a></div>}
             {data.Leetcode && <div><a href={data.Leetcode.link}>
-                <span className="icon-frame"><img src={leetcode} style={{height: "100%"}} alt="leetcode-icon"/></span>
-                {data.Leetcode.username}
+                <IconFrame src={leetcode} alt={'leetcode-icon'}/>{data.Leetcode.username}
             </a></div>}
         </div>
         <div className="portrait-frame">

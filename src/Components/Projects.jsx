@@ -1,4 +1,5 @@
 import React from 'react';
+import { IconFrame } from './IconFrame';
 import link from '../assets/icon-link.png';
 import group from '../assets/icon-group.png';
 import calendar from '../assets/icon-calendar.png';
@@ -9,21 +10,18 @@ export const Projects = ({data}) => {
         {data.map((item, index, array) => 
         <div>
             <label className='content checkBox-layout'>
-                <input type="checkbox" style={{margin:"auto 10px auto 0"}} id={'proj' + index}/>
-                <div className="job-proj-info" id={'proj' + index}>
+                <input type="checkbox" style={{margin:"auto 10px auto 0"}}/>
+                <div className="job-proj-info">
                     <h2 style={{gridArea:"title"}}>{item.title}</h2>
                     <div style={{gridArea:"info"}}>
                         <div>
-                            <span className="icon-frame"><img style={{height:"100%"}} src={group} alt='group-icon' /></span>
-                            {item.group}
+                            <IconFrame src={group} altTxt={'group-icon'}/>{item.group}
                         </div>
                         <div>
-                            <span className="icon-frame"><img style={{height:"100%"}} src={calendar} alt='calendar-icon' /></span>
-                            {item.timePeriod.from + ' - ' + item.timePeriod.to}
+                            <IconFrame src={calendar} altTxt={'calendar-icon'} />{item.timePeriod.from + ' - ' + item.timePeriod.to}
                         </div>
                         {item.link && <div><a href={item.link}>
-                            <span className="icon-frame"><img style={{height:"100%"}} src={link} alt='link-icon' /></span>
-                            {item.link}
+                            <IconFrame src={link} alt={'link-icon'} />{item.link}
                         </a></div>}
                     </div>
                     <div style={{gridArea:"dscrb"}}>
