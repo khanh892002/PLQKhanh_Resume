@@ -79,7 +79,7 @@
             "title": "Encrypting and Decrypting C++ program",
             "group": "3 members",
             "timePeriod": { "from": "December 2023", "to": "January 2024" },
-            "link": "",
+            "link": "https://github.com/khanh892002/large-integer-handling-object-idea",
             "contribution": ["Designing large integer handling objects","Designing user interacting command line console"],
             "techStack": ["OOP","RSA encryption"],
             "deliverables": "A simple file encryption/decryption program using RSA method, featuring large int handling and the ability to input or generate key pairs"
