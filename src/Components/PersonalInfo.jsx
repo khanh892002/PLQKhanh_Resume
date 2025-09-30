@@ -1,6 +1,5 @@
 import React from "react";
 import { IconFrame } from "./IconFrame";
-import portrait from '../assets/portrait.png';
 import git from '../assets/icon-github.png';
 import mail from '../assets/icon-email.png';
 import mobile from '../assets/icon-mobile.png';
@@ -24,8 +23,6 @@ export const PersonalInfo = ({data}) => {
                 <IconFrame src={leetcode} altTxt={'leetcode-icon'}/>{data.Leetcode.username}
                 </a></div>}
         </div>
-        <div className="portrait-frame">
-            <img src={portrait} style={{width:"100%"}} alt="portrait"/>
-        </div>
+        <div className="portrait-frame"></div>
     </div>
 }

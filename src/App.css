@@ -157,10 +157,14 @@ button:disabled, button.dark-theme:disabled {
 .portrait-frame {
   aspect-ratio: 1;
   align-self: start;
-  overflow: hidden;
   border-radius: 50%;
   max-height: 150px;
   border: 5px solid var(--light-theme);
+  background-image: url('./assets/portrait.png');
+  background-position: center;
+  background-size: cover;
+  clip-path: circle(50%);
+  z-index: -1;
 }
 .portrait-frame.dark-theme {
   border-color: var(--dark-theme);
