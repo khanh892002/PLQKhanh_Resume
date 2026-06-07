@@ -21,7 +21,7 @@ function App() {
       a.setAttribute('target', '_blank');
       a.setAttribute('rel', 'noopener noreferrer');
     });
-    
+
     // setting theme switching feature
     const themeToggle = document.querySelector('label.theme-mode>input');
     const label = document.querySelector('label.theme-mode');
@@ -32,13 +32,13 @@ function App() {
       manyElements.forEach(item => item.classList.toggle('dark-theme', themeToggle.checked));
     }
     themeToggle.addEventListener('change', changeTheme);
-    
+
     // setting download button behaviour
     // clicking on the download copy button: div with darken-layout div appear
     const createPDFBtn = document.getElementById('createPDF-btn');
     const darkLayoutWrapper = document.getElementById('dark-layout-wrapper');
     const popup = document.getElementById('popup');
-    async function clickCreatePDFBtn () {
+    async function clickCreatePDFBtn() {
       darkLayoutWrapper.hidden = false;
       popup.textContent = 'Generating PDF...';
       try {
@@ -85,8 +85,8 @@ function App() {
           margin: 0,
           filename: 'PLQKhanh_CV.pdf',
           image: { type: 'jpeg', quality: 0.98 },
-          pagebreak: {mode: ['avoid-all']}, //prevent splitting within, Love this
-          html2canvas: { scale: 2, useCORS: true, letterRendering: true},
+          pagebreak: { mode: ['avoid-all'] }, //prevent splitting within, Love this
+          html2canvas: { scale: 2, useCORS: true, letterRendering: true },
           jsPDF: { orientation: 'portrait' }
         };
         const pdf = await html2pdf().set(opt).from(bgWrapper).outputPdf('blob');
@@ -102,15 +102,15 @@ function App() {
       }
     }
     createPDFBtn.addEventListener('click', clickCreatePDFBtn);
-    
+
     // clicking on the Cancel button: close the div with darken-layout div
-    const cancelBtn = document.getElementById('cancel-download');    
+    const cancelBtn = document.getElementById('cancel-download');
     function clickCancel() { darkLayoutWrapper.hidden = true; }
     cancelBtn.addEventListener('click', clickCancel);
     //clicking on the darkened layout
     const darkLayoutDiv = document.getElementById('darken-layout');
-    function clickDarkLayout(e) { 
-      if (e.target === darkLayoutDiv) darkLayoutWrapper.hidden = true; 
+    function clickDarkLayout(e) {
+      if (e.target === darkLayoutDiv) darkLayoutWrapper.hidden = true;
     }
     darkLayoutDiv.addEventListener('click', clickDarkLayout);
 
@@ -131,37 +131,37 @@ function App() {
       checkBoxes.forEach(item => item.removeEventListener('change', downloadable));
     }
   }, [pdfUrl]);
-    
+
 
   return (cv) ? (
     <>
-    <label className='theme-mode'><input type="checkbox"/><div></div></label>
-    <div className="App">
-      <PersonalInfo data={cv.PersonalInfo}/>
-      <Education data={cv.Education}/>
-      <Objective data={cv.Objective}/>
-      <WorkingExp data={cv.WorkingExp}/>
-      <Projects data={cv.Projects}/>
-      <Skills data={cv.Skills}/>
-      <LanguageSkill data={cv.LangSkills}/>
-    </div>
-    <div style={{textAlign: 'center'}}>
-        <button id="createPDF-btn" disabled>Make a pdf copy</button>
-    </div>
-    <div id="dark-layout-wrapper" style={{position:'absolute', top: '0', left: '0'}} hidden>
-      <div id='darken-layout'>
-        <div id="popup"></div>
-        <div style={{display: 'block'}}>
-          {pdfBlob && <button onClick={() => {
-            const a = document.createElement('a');
-            a.href = pdfUrl;
+      <label className='theme-mode'><input type="checkbox" /><div></div></label>
+      <div className="App">
+        <PersonalInfo data={cv.PersonalInfo} />
+        <Education data={cv.Education} />
+        <Objective data={cv.Objective} />
+        <WorkingExp data={cv.WorkingExp} />
+        <Projects data={cv.Projects} />
+        <Skills data={cv.Skills} />
+        <LanguageSkill data={cv.LangSkills} />
+      </div>
+      <div style={{ textAlign: 'center' }}>
+        <button id="createPDF-btn" disabled>Export PDF copy</button>
+      </div>
+      <div id="dark-layout-wrapper" style={{ position: 'absolute', top: '0', left: '0' }} hidden>
+        <div id='darken-layout'>
+          <div id="popup"></div>
+          <div style={{ display: 'block' }}>
+            {pdfBlob && <button onClick={() => {
+              const a = document.createElement('a');
+              a.href = pdfUrl;
               a.download = 'PLQKhanh_CV.pdf';
-            a.click();
-          }}>Download PDF file</button>}
-          <button id="cancel-download">Cancel</button>  
+              a.click();
+            }}>Download PDF file</button>}
+            <button id="cancel-download">Cancel</button>
+          </div>
         </div>
       </div>
-    </div>
     </>
   ) : <div>Loading...</div>;
 }

@@ -20,8 +20,8 @@
 		}
 	},
 	"Objective": {
-		"shortTerm": "Gaining hands-on experience and secure a position as a full-time employee within the company",
-		"longTerm": "Further expanding on professional skills, acquiring new technologies to contribute to the company with more projects"
+		"shortTerm": "Seeking to leverage C++ and Python proficiency to contribute to robust backend systems and secure a position as a full-time employee within the company",
+		"longTerm": "Further expanding on professional skills and acquiring new technologies to bring more value to the company"
 	},
 	"WorkingExp": [
 		{
@@ -37,7 +37,7 @@
 				"Checking and Entering (Updating) information, data",
 				"Handling papers",
 				"Receiving pupils",
-				"Logistics works"
+				"Logistics tasks"
 			]
 		},
 		{
@@ -52,86 +52,210 @@
 				"Creating prompts that match project's goals and instructions",
 				"Reviewing and evaluating AI's responses based on clarity, relevance and accuracy, with careful attention to instruction following",
 				"Using domain knowledge such as Mathematics and Programming to verify the correctness of claims made in AI responses, and identifying subtle errors or misleading information",
-				"Providing feedback to help improve quality and consitency of models"
+				"Providing feedback to help improve quality and consistency of models"
 			]
 		}
 	],
 	"Projects": [
 		{
-			"title": "Data transfering program in C",
+			"title": "Data transferring program in C",
 			"group": "Personal",
-			"timePeriod": { "from": "July 15th 2024", "to": "July 31st 2024" },
+			"timePeriod": {
+				"from": "July 15th 2024",
+				"to": "July 31st 2024"
+			},
 			"link": "https://github.com/khanh892002/simple-data-transfering-program",
-			"contribution": ["Windows and Linux OS specifized handling","designing text and file transfering protocols using Sockets","handling timeout"],
-			"techStack": ["Socket","C"],
+			"contribution": [
+				"Windows and Linux OS specified handling",
+				"designing text and file transferring protocols using Sockets",
+				"handling timeout"
+			],
+			"techStack": [
+				"Socket",
+				"C"
+			],
 			"deliverables": "A server-client program that can transfer messages and files, capable of handling multiple clients simultaneously while limiting the number of connections from a single IP address"
 		},
 		{
 			"title": "Penetration testing tool",
 			"group": "5 members",
-			"timePeriod": { "from": "September 2023", "to": "March 2024" },
+			"timePeriod": {
+				"from": "September 2023",
+				"to": "March 2024"
+			},
 			"link": "https://github.com/trhieung/APT-Cyber-Kill-Chain",
-			"contribution": ["Theoretical research","research on subtool utilization (including spiderfoot, metasploit, sliver)"],
-			"techStack": ["VirtualBox","APT attack methods","metasploite","spiderfoot","sliver","bash script"],
+			"contribution": [
+				"Theoretical research",
+				"research on subtool utilization (including spiderfoot, Metasploite, sliver)"
+			],
+			"techStack": [
+				"VirtualBox",
+				"APT attack methods",
+				"Metasploite",
+				"spiderfoot",
+				"sliver",
+				"bash script"
+			],
 			"deliverables": "A functioning tool imitating an phising attack exploiting emails upon a target system, scanning potential vulnerabilities and making report"
 		},
 		{
 			"title": "Encrypting and Decrypting C++ program",
 			"group": "3 members",
-			"timePeriod": { "from": "December 2023", "to": "January 2024" },
+			"timePeriod": {
+				"from": "December 2023",
+				"to": "January 2024"
+			},
 			"link": "https://github.com/khanh892002/large-integer-handling-object-idea",
-			"contribution": ["Designing large integer handling objects","Designing user interacting command line console"],
-			"techStack": ["OOP","RSA encryption"],
+			"contribution": [
+				"Designing large integer handling objects",
+				"Designing user interacting command line console"
+			],
+			"techStack": [
+				"OOP",
+				"RSA encryption"
+			],
 			"deliverables": "A simple file encryption/decryption program using RSA method, featuring large int handling and the ability to input or generate key pairs"
 		},
 		{
 			"title": "Blockchain model Implementation",
 			"group": "5 members",
-			"timePeriod": { "from": "November 2023", "to": "December 2023" },
+			"timePeriod": {
+				"from": "November 2023",
+				"to": "December 2023"
+			},
 			"link": "https://github.com/Thehien11/Blockchain_HCMUS",
-			"contribution": ["Implementing Transactions Verification", "Designing front-end user interacting console"],
-			"techStack": ["Golang","Blockchain"],
+			"contribution": [
+				"Implementing Transactions Verification",
+				"Designing front-end user interacting console"
+			],
+			"techStack": [
+				"Golang",
+				"Blockchain"
+			],
 			"deliverables": "A Blockchain Golang program with core functionalities, including adding new transactions, displaying transaction details, validating transactions and creating a new blockchain"
 		},
 		{
 			"title": "Personal CV builder",
 			"group": "Personal",
-			"timePeriod": { "from": "July 12th 2025", "to": "August 19th 2025" },
+			"timePeriod": {
+				"from": "July 12th 2025",
+				"to": "August 19th 2025"
+			},
 			"link": "https://github.com/khanh892002/PLQKhanh_Resume",
-			"contribution": ["Frontend designing","Implement PDF file creation","Customizable project and work experience selection","Deploying source code onto Vercel"],
-			"techStack": ["Javascript","React","HTML","CSS","Vercel"],
+			"contribution": [
+				"Frontend designing",
+				"Implement PDF file creation",
+				"Customizable project and work experience selection",
+				"Deploying source code onto Vercel"
+			],
+			"techStack": [
+				"Javascript",
+				"React",
+				"HTML",
+				"CSS",
+				"Vercel"
+			],
 			"deliverables": "plq-khanh-resume.vercel.app"
 		},
 		{
 			"title": "Simple Google searching integration",
 			"group": "Personal",
-			"timePeriod": { "from": "June 9th 2025", "to": "June 14th 2025" },
+			"timePeriod": {
+				"from": "June 9th 2025",
+				"to": "June 14th 2025"
+			},
 			"link": "https://github.com/khanh892002/simple-searching-API-integration",
-			"contribution": ["Web and API designing on the frontend with light and dark modes","Handling request from the frontend and response from SerpAPI","test cases implementing","Deploying source code onto Vercel (frontend) and Render (backend)"],
-			"techStack": ["Javascript","NodeJS","HTML","CSS","Jest","Supertest","Vercel","Render"],
+			"contribution": [
+				"Web and API designing on the frontend with light and dark modes",
+				"Handling request from the frontend and response from SerpAPI",
+				"test cases implementing",
+				"Deploying source code onto Vercel (frontend) and Render (backend)"
+			],
+			"techStack": [
+				"Javascript",
+				"NodeJS",
+				"HTML",
+				"CSS",
+				"Jest",
+				"Supertest",
+				"Vercel",
+				"Render"
+			],
 			"deliverables": "A simple Google searching website using SerpAPI to for Google’s engine and displaying organic results with some simple test cases handled on the server side."
 		},
 		{
 			"title": "Grammar syntax analyzer",
 			"group": "Personal",
-			"timePeriod": { "from": "May 25th 2026", "to": "June 7th 2026" },
+			"timePeriod": {
+				"from": "May 25th 2026",
+				"to": "June 7th 2026"
+			},
 			"link": "https://github.com/khanh892002/SentenceAnalyzing",
-			"contribution": ["Website designing","Presenting analyzing results with structured grammar elements","Deploying app using FireBase and Render"],
-			"techStack": ["Javascript","NodeJS","HTML","CSS","ReactJS","FireBase","Render","Spacy","html-to-image"],
+			"contribution": [
+				"Website designing",
+				"Presenting analyzing results with structured grammar elements",
+				"Deploying app using FireBase and Render"
+			],
+			"techStack": [
+				"Javascript",
+				"NodeJS",
+				"HTML",
+				"CSS",
+				"ReactJS",
+				"FireBase",
+				"Render",
+				"Spacy",
+				"html-to-image"
+			],
 			"deliverables": "https://syntax-analyzer-24163.web.app"
 		}
 	],
 	"Skills": {
-		"ProgLangs": {
-			"Proficient": ["C/C++","Python","SQL"],
-			"Beginner": ["Golang", "Javascript", "ExpressJS", "ReactJS", "PHP", "HTML", "Bash script"]
-		},
-		"Databases": ["Microsoft SQL Server"],
-		"Tools": ["nmap", "Sliver", "Spiderfoot", "Metasploite", "Invoke-Stealth", "Git", "VirtualBox", "WSL"],
-		"Soft skills": ["Self-learning", "Teamwork", "Analytical thinking", "Problem-solving"],
-		"Other Expertises": ["Mathematics", "Physics", "Prompt Engineering"],
-		"Software Developing Process": ["Agile/Scrum"],
-		"Dev IDEs": ["Visual Studio"]
+		"Programming languages": [
+			"C/C++",
+			"Python",
+			"SQL",
+			"Golang"
+		],
+		"Frontend": [
+			"HTML",
+			"CSS",
+			"React",
+			"Javascript"
+		],
+		"Backend": [
+			"NodeJS",
+			"ExpressJS",
+			"PHP",
+			"SQL"
+		],
+		"Databases": [
+			"Microsoft SQL Server"
+		],
+		"Security/System Tools": [
+			"nmap",
+			"Sliver",
+			"Spiderfoot",
+			"Metasploite",
+			"Invoke-Stealth",
+			"VirtualBox",
+			"WSL"
+		],
+		"Workflow": [
+			"Agile/Scrum",
+			"Git"
+		],
+		"Soft skills": [
+			"Self-learning",
+			"Teamwork",
+			"Analytical thinking",
+			"Problem-solving"
+		],
+		"Other Expertises": [
+			"Mathematics",
+			"Physics",
+			"Prompt Engineering"
+		],
 	},
 	"LangSkills": {
 		"Vietnamese": "Native",

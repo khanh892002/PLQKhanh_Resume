@@ -13,7 +13,7 @@
 }
 
 :root {
-  --dark-bg: #2c3e50;
+  --dark-bg: #282c34;
   --light-theme: #9fd369;
   --dark-theme: #8cc052;
 }
@@ -21,9 +21,11 @@
 body {
   display: grid;
   place-items: center;
-  font-family: cursive;
+  font-family: 'Playfair Display', serif;
+  /*or Inter, Roboto or Lato*/
   transition: .4s ease-in-out;
 }
+
 body.dark-theme {
   font-family: MonaspaceNeon;
   background-color: var(--dark-bg);
@@ -31,31 +33,39 @@ body.dark-theme {
 }
 
 label.theme-mode {
-  position: fixed; top: 10px; right: 10px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
   padding: 3px;
-  width: 52px; height: 26px;
+  width: 52px;
+  height: 26px;
   border: 3px solid black;
   border-radius: 29px;
   transition: .4s ease-in-out;
 }
+
 label.dark-theme {
   border-color: var(--dark-theme);
 }
 
 label.theme-mode>div {
   position: absolute;
-  height: 26px; aspect-ratio: 1;
+  height: 26px;
+  aspect-ratio: 1;
   border-radius: 50%;
   background-color: black;
   transition: .4s ease-in-out;
 }
+
 label.theme-mode>div.dark-theme {
   transform: translateX(26px);
   background-color: var(--dark-theme);
 }
 
 label.theme-mode>input {
-  opacity: 0; width: 0; height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
   position: absolute;
 }
 
@@ -78,7 +88,10 @@ h2 {
   white-space: normal;
   align-self: center;
 }
-h1.dark-theme,h2.dark-theme,b.dark-theme {
+
+h1.dark-theme,
+h2.dark-theme,
+b.dark-theme {
   color: #0f0;
 }
 
@@ -99,7 +112,7 @@ ul {
 
 li:not(:first-child) {
   margin-top: 0.5em;
- }
+}
 
 /* when hovered, the button will move up a little
 when activated (clicked), the button will move down, imitating a pushed-down button*/
@@ -113,29 +126,35 @@ button {
   border-radius: 0.5em;
   transition: all 0.4s ease-in-out;
 }
+
 button:hover {
   transform: translateY(-1px);
 }
+
 button:active {
   transform: translateY(2px);
 }
+
 /* in dark theme, text and border color will change base on the theme colors,
 increase in size when hovered on,
 change text color and shrink a little when activated (clicked)*/
 button.dark-theme {
   border: 1px solid var(--dark-theme);
 }
+
 button.dark-theme:hover {
   color: skyblue;
   border-color: skyblue;
   transform: scale(1.05);
 }
+
 button.dark-theme:active {
   color: #121212;
   transform: scale(0.98);
 }
 
-button:disabled, button.dark-theme:disabled {
+button:disabled,
+button.dark-theme:disabled {
   background-color: #e5e7eb;
   color: #9ca3af;
   cursor: not-allowed;
@@ -150,6 +169,7 @@ button:disabled, button.dark-theme:disabled {
   background-color: var(--light-theme);
   border-radius: 50%;
 }
+
 .icon-frame.dark-theme {
   background-color: var(--dark-theme);
 }
@@ -166,6 +186,7 @@ button:disabled, button.dark-theme:disabled {
   clip-path: circle(50%);
   z-index: -1;
 }
+
 .portrait-frame.dark-theme {
   border-color: var(--dark-theme);
 }
@@ -173,7 +194,7 @@ button:disabled, button.dark-theme:disabled {
 .job-proj-info {
   display: grid;
   grid-template-areas: 'title info'
-                      'dscrb dscrb';
+    'dscrb dscrb';
   row-gap: 0.5em;
 }
 
@@ -186,6 +207,7 @@ button:disabled, button.dark-theme:disabled {
   border: 5px solid var(--light-theme);
   border-radius: 10px;
 }
+
 .content.dark-theme {
   border-color: var(--dark-theme);
 }
@@ -199,7 +221,8 @@ button:disabled, button.dark-theme:disabled {
   grid-template-columns: auto auto;
 }
 
-#root, #popup {
+#root,
+#popup {
   min-width: 640px;
   max-width: 750px;
 }
@@ -212,7 +235,7 @@ button:disabled, button.dark-theme:disabled {
   text-align: center;
 }
 
-.App > div {
+.App>div {
   margin-bottom: 1em;
 }
 
@@ -220,6 +243,7 @@ button:disabled, button.dark-theme:disabled {
   position: fixed;
   display: grid;
   place-items: center;
-  height: 100%; width: 100%;
-  background-color: rgba(0,0,0,.5);
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .5);
 }
