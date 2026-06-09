@@ -4,25 +4,29 @@ import git from '../assets/icon-github.png';
 import mail from '../assets/icon-email.png';
 import mobile from '../assets/icon-mobile.png';
 import leetcode from '../assets/icon-leetcode.png';
+import linkedin from '../assets/icon-linkedin.png';
 
-export const PersonalInfo = ({data}) => {
-    return <div className="PersonalInfo" style={{display:"grid", gridTemplateColumns: "4fr 1fr"}}>
-        <div>
-            <h1 style={{marginBottom: ".5em"}}>{data.FullName}</h1>
-            {data.Email && <div>
-                <IconFrame src={mail} altTxt={'email-icon'} />{data.Email}
-                </div>}
-            {data.Mobile && <div>
-                <IconFrame src={mobile} altTxt={'smartphone-icon'}/>{data.Mobile}
-                </div>}
-            {data.Github && <div><a href={data.Github}>
-                <IconFrame src={git} altTxt={'github-icon'}/>
-                {data.Github.substr(data.Github.lastIndexOf('/') + 1)}
-                </a></div>}
-            {data.Leetcode && <div><a href={data.Leetcode.link}>
-                <IconFrame src={leetcode} altTxt={'leetcode-icon'}/>{data.Leetcode.username}
-                </a></div>}
-        </div>
-        <div className="portrait-frame"></div>
-    </div>
+export const PersonalInfo = ({ data }) => {
+	return <div className="PersonalInfo" style={{ display: "grid", gridTemplateColumns: "4fr 1fr" }}>
+		<div>
+			<h1 style={{ marginBottom: ".5em" }}>{data.FullName}</h1>
+			{data.Email && <div>
+				<IconFrame src={mail} altTxt={'email-icon'} />{data.Email}
+			</div>}
+			{data.Mobile && <div>
+				<IconFrame src={mobile} altTxt={'smartphone-icon'} />{data.Mobile}
+			</div>}
+			{data.LinkedIn && <div><a href={data.LinkedIn}>
+				<IconFrame src={linkedin} altTxt={'linkedin-icon'} />{data.LinkedIn}
+			</a></div>}
+			{data.Github && <div><a href={data.Github}>
+				<IconFrame src={git} altTxt={'github-icon'} />
+				{data.Github.substr(data.Github.lastIndexOf('/') + 1)}
+			</a></div>}
+			{data.Leetcode && <div><a href={data.Leetcode.link}>
+				<IconFrame src={leetcode} altTxt={'leetcode-icon'} />{data.Leetcode.username}
+			</a></div>}
+		</div>
+		<div className="portrait-frame"></div>
+	</div>
 }

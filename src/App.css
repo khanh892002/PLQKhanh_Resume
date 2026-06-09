@@ -1,249 +1,249 @@
 @font-face {
-  font-family: 'MonaspaceNeon';
-  src: url('./assets/fonts/MonaspaceNeon-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
+	font-family: 'MonaspaceNeon';
+	src: url('./assets/fonts/MonaspaceNeon-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'MonaspaceNeon';
-  src: url('./assets/fonts/MonaspaceNeon-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
+	font-family: 'MonaspaceNeon';
+	src: url('./assets/fonts/MonaspaceNeon-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
 }
 
 :root {
-  --dark-bg: #282c34;
-  --light-theme: #9fd369;
-  --dark-theme: #8cc052;
+	--dark-bg: #1a1a1a;
+	--light-theme: #9fd369;
+	--dark-theme: #8cc052;
 }
 
 body {
-  display: grid;
-  place-items: center;
-  font-family: 'Playfair Display', serif;
-  /*or Inter, Roboto or Lato*/
-  transition: .4s ease-in-out;
+	display: grid;
+	place-items: center;
+	font-family: 'Playfair Display', serif;
+	/*or Inter, Roboto or Lato*/
+	transition: .4s ease-in-out;
 }
 
 body.dark-theme {
-  font-family: MonaspaceNeon;
-  background-color: var(--dark-bg);
-  color: #d1d5db;
+	font-family: MonaspaceNeon;
+	background-color: var(--dark-bg);
+	color: orange;
 }
 
 label.theme-mode {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  padding: 3px;
-  width: 52px;
-  height: 26px;
-  border: 3px solid black;
-  border-radius: 29px;
-  transition: .4s ease-in-out;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	padding: 3px;
+	width: 52px;
+	height: 26px;
+	border: 3px solid black;
+	border-radius: 29px;
+	transition: .4s ease-in-out;
 }
 
 label.dark-theme {
-  border-color: var(--dark-theme);
+	border-color: var(--dark-theme);
 }
 
 label.theme-mode>div {
-  position: absolute;
-  height: 26px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: black;
-  transition: .4s ease-in-out;
+	position: absolute;
+	height: 26px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-color: black;
+	transition: .4s ease-in-out;
 }
 
 label.theme-mode>div.dark-theme {
-  transform: translateX(26px);
-  background-color: var(--dark-theme);
+	transform: translateX(26px);
+	background-color: var(--dark-theme);
 }
 
 label.theme-mode>input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-  position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+	position: absolute;
 }
 
 div {
-  overflow: hidden;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
+	overflow: hidden;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	white-space: normal;
 }
 
 h1 {
-  margin: 0;
+	margin: 0;
 }
 
 h2 {
-  margin: 0 1em 0 0;
-  overflow: hidden;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-  align-self: center;
+	margin: 0 1em 0 0;
+	overflow: hidden;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	white-space: normal;
+	align-self: center;
 }
 
 h1.dark-theme,
 h2.dark-theme,
 b.dark-theme {
-  color: #0f0;
+	color: skyblue;
 }
 
 hr {
-  border-style: dashed;
-  opacity: 0.25;
+	border-style: dashed;
+	opacity: 0.25;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 ul {
-  margin-top: 0.5em;
-  margin-bottom: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0;
 }
 
 li:not(:first-child) {
-  margin-top: 0.5em;
+	margin-top: 0.5em;
 }
 
 /* when hovered, the button will move up a little
 when activated (clicked), the button will move down, imitating a pushed-down button*/
 button {
-  font-size: medium;
-  font-family: inherit;
-  background-color: black;
-  color: var(--light-theme);
-  border-color: var(--light-theme);
-  padding: 0.5em 1em;
-  border-radius: 0.5em;
-  transition: all 0.4s ease-in-out;
+	font-size: medium;
+	font-family: inherit;
+	background-color: black;
+	color: var(--light-theme);
+	border-color: var(--light-theme);
+	padding: 0.5em 1em;
+	border-radius: 0.5em;
+	transition: all 0.4s ease-in-out;
 }
 
 button:hover {
-  transform: translateY(-1px);
+	transform: translateY(-1px);
 }
 
 button:active {
-  transform: translateY(2px);
+	transform: translateY(2px);
 }
 
 /* in dark theme, text and border color will change base on the theme colors,
 increase in size when hovered on,
 change text color and shrink a little when activated (clicked)*/
 button.dark-theme {
-  border: 1px solid var(--dark-theme);
+	border: 1px solid var(--dark-theme);
 }
 
 button.dark-theme:hover {
-  color: skyblue;
-  border-color: skyblue;
-  transform: scale(1.05);
+	color: skyblue;
+	border-color: skyblue;
+	transform: scale(1.05);
 }
 
 button.dark-theme:active {
-  color: #121212;
-  transform: scale(0.98);
+	color: #121212;
+	transform: scale(0.98);
 }
 
 button:disabled,
 button.dark-theme:disabled {
-  background-color: #e5e7eb;
-  color: #9ca3af;
-  cursor: not-allowed;
-  opacity: 0.6;
+	background-color: #e5e7eb;
+	color: #9ca3af;
+	cursor: not-allowed;
+	opacity: 0.6;
 }
 
 .icon-frame {
-  display: inline-block;
-  height: 1em;
-  padding: 0.25em;
-  margin: 0.25em 0.25em 0.25em 0;
-  background-color: var(--light-theme);
-  border-radius: 50%;
+	display: inline-block;
+	height: 1em;
+	padding: 0.25em;
+	margin: 0.25em 0.25em 0.25em 0;
+	background-color: var(--light-theme);
+	border-radius: 50%;
 }
 
 .icon-frame.dark-theme {
-  background-color: var(--dark-theme);
+	background-color: var(--dark-theme);
 }
 
 .portrait-frame {
-  aspect-ratio: 1;
-  align-self: start;
-  border-radius: 50%;
-  max-height: 150px;
-  border: 5px solid var(--light-theme);
-  background-image: url('./assets/portrait.png');
-  background-position: center;
-  background-size: cover;
-  clip-path: circle(50%);
-  z-index: -1;
+	aspect-ratio: 1;
+	align-self: start;
+	border-radius: 50%;
+	max-height: 150px;
+	border: 5px solid var(--light-theme);
+	background-image: url('./assets/portrait.png');
+	background-position: center;
+	background-size: cover;
+	clip-path: circle(50%);
+	z-index: -1;
 }
 
 .portrait-frame.dark-theme {
-  border-color: var(--dark-theme);
+	border-color: var(--dark-theme);
 }
 
 .job-proj-info {
-  display: grid;
-  grid-template-areas: 'title info'
-    'dscrb dscrb';
-  row-gap: 0.5em;
+	display: grid;
+	grid-template-areas: 'title info'
+		'dscrb dscrb';
+	row-gap: 0.5em;
 }
 
 .job-proj-info>div:last-child>div:not(:last-child) {
-  margin-bottom: 0.5em;
+	margin-bottom: 0.5em;
 }
 
 .content {
-  padding: 10px;
-  border: 5px solid var(--light-theme);
-  border-radius: 10px;
+	padding: 10px;
+	border: 5px solid var(--light-theme);
+	border-radius: 10px;
 }
 
 .content.dark-theme {
-  border-color: var(--dark-theme);
+	border-color: var(--dark-theme);
 }
 
 .Skills>.content>div:not(:last-child) {
-  margin-bottom: .5em;
+	margin-bottom: .5em;
 }
 
 .checkBox-layout {
-  display: grid;
-  grid-template-columns: auto auto;
+	display: grid;
+	grid-template-columns: auto auto;
 }
 
 #root,
 #popup {
-  min-width: 640px;
-  max-width: 750px;
+	min-width: 640px;
+	max-width: 750px;
 }
 
 #popup {
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid white;
-  background-color: white;
-  text-align: center;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid white;
+	background-color: white;
+	text-align: center;
 }
 
 .App>div {
-  margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 
 #darken-layout {
-  position: fixed;
-  display: grid;
-  place-items: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, .5);
+	position: fixed;
+	display: grid;
+	place-items: center;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .5);
 }

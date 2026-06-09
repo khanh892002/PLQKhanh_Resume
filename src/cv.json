@@ -4,6 +4,7 @@
 		"Email": "phamlequockhanh892002@gmail.com",
 		"Mobile": "+8483-6969-131",
 		"Github": "https://github.com/khanh892002",
+		"LinkedIn": "https://www.linkedin.com/in/plqkhanh-a9b721327/",
 		"Leetcode": {
 			"link": "https://leetcode.com/u/q9KCrWjqay/",
 			"username": "Plqkhanh"
@@ -13,249 +14,137 @@
 		"School": "University of Science, VNU-HCM",
 		"Degree": "Bachelor of Computer Science",
 		"Major": "Information Security",
-		"GPA": 3.417,
-		"TimePeriod": {
-			"from": "September 2020",
-			"to": "July 2024"
-		}
+		"GPA": "3.417 / 4.0",
+		"TimePeriod": {"from": "September 2020", "to": "July 2024"}
 	},
 	"Objective": {
-		"shortTerm": "Seeking to leverage C++ and Python proficiency to contribute to robust backend systems and secure a position as a full-time employee within the company",
+		"shortTerm": "Seeking to leverage C++ and Python proficiency to contribute to robust backend systems and secure a full-time position in software development",
 		"longTerm": "Further expanding on professional skills and acquiring new technologies to bring more value to the company"
 	},
 	"WorkingExp": [
 		{
-			"title": "Collaborator",
-			"office": "BA group's managing office",
-			"timePeriod": {
-				"from": "September 2022",
-				"to": "July 2024"
-			},
-			"addr": "B dormitory, VNU-HCM",
+			"title": "Administrative Collaborator",
+			"office": "BA Group managing office",
+			"timePeriod": {"from": "September 2022","to": "July 2024"},
+			"addr": "B Dormitory, VNU-HCM",
 			"description": [
-				"Assisting with administrative office tasks, along with various duties and manual labor",
-				"Checking and Entering (Updating) information, data",
-				"Handling papers",
-				"Receiving pupils",
-				"Logistics tasks"
+				"Streamlined administrative office tasks and managed data entry operations with high accuracy.",
+				"Maintained and updated resident information databases and processed official documentation.",
+				"Coordinated logistics and provided front-desk support for incoming students and visitors."
 			]
 		},
 		{
-			"title": "Prompt Engineering and AI's response Evaluator",
+			"title": "Prompt Engineering & AI Evaluator",
 			"office": "Outlier platform",
-			"timePeriod": {
-				"from": "February 2025",
-				"to": "Now"
-			},
-			"addr": "Remote projects",
+			"timePeriod": {"from": "February 2025","to": "Present"},
+			"addr": "Remote",
 			"description": [
-				"Creating prompts that match project's goals and instructions",
-				"Reviewing and evaluating AI's responses based on clarity, relevance and accuracy, with careful attention to instruction following",
-				"Using domain knowledge such as Mathematics and Programming to verify the correctness of claims made in AI responses, and identifying subtle errors or misleading information",
-				"Providing feedback to help improve quality and consistency of models"
+				"Design complex prompts tailored to specific project goals and logical constraints.",
+				"Evaluate AI model responses for technical accuracy, clarity, and strict adherence to instructions.",
+				"Apply domain expertise in Mathematics and Programming to debug AI logic and identify subtle hallucinations."
 			]
 		}
 	],
 	"Projects": [
 		{
-			"title": "Data transferring program in C",
+			"title": "C-Base Multi-Client Data Transfer System",
 			"group": "Personal",
-			"timePeriod": {
-				"from": "July 15th 2024",
-				"to": "July 31st 2024"
-			},
+			"timePeriod": {"from": "July 2024","to": "August 2024"},
 			"link": "https://github.com/khanh892002/simple-data-transfering-program",
 			"contribution": [
-				"Windows and Linux OS specified handling",
-				"designing text and file transferring protocols using Sockets",
-				"handling timeout"
+				"Implemented cross-platform socket handling for Windows and Linux OS.","Designed custom application-layer protocols for reliable text and file transmission.","Developed a connection-limiting feature per IP address to prevent basic DoS attacks."
 			],
 			"techStack": [
-				"Socket",
-				"C"
+				"C","Socket Programming","Network Security"
 			],
-			"deliverables": "A server-client program that can transfer messages and files, capable of handling multiple clients simultaneously while limiting the number of connections from a single IP address"
+			"deliverables": "A robust server-client architecture capable of handling concurrent connections and secure file transfers."
 		},
 		{
-			"title": "Penetration testing tool",
-			"group": "5 members",
-			"timePeriod": {
-				"from": "September 2023",
-				"to": "March 2024"
-			},
+			"title": "APT Cyber Kill Chain Penetration Tool",
+			"group": "Academic (5 Members)",
+			"timePeriod": {"from": "September 2023","to": "March 2024"},
 			"link": "https://github.com/trhieung/APT-Cyber-Kill-Chain",
 			"contribution": [
-				"Theoretical research",
-				"research on subtool utilization (including spiderfoot, Metasploite, sliver)"
+				"Conducted theoretical research on APT attack vectors and the Cyber Kill Chain framework.",
+				"Integrated and automated sub-tools including Spiderfoot, Metasploit, and Sliver.",
+				"Developed Bash scripts to automate vulnerability scanning and reporting."
 			],
-			"techStack": [
-				"VirtualBox",
-				"APT attack methods",
-				"Metasploite",
-				"spiderfoot",
-				"sliver",
-				"bash script"
-			],
-			"deliverables": "A functioning tool imitating an phising attack exploiting emails upon a target system, scanning potential vulnerabilities and making report"
+			"techStack": ["VirtualBox","Metasploite","Spiderfoot","Sliver","Bash Script"],
+			"deliverables": "An automated tool simulating phishing-based APT attacks to test organizational defensive capabilities."
 		},
 		{
-			"title": "Encrypting and Decrypting C++ program",
-			"group": "3 members",
-			"timePeriod": {
-				"from": "December 2023",
-				"to": "January 2024"
-			},
+			"title": "RSA File Encryption/Decryption Tool",
+			"group": "Academic (3 members)",
+			"timePeriod": {"from": "December 2023","to": "January 2024"},
 			"link": "https://github.com/khanh892002/large-integer-handling-object-idea",
 			"contribution": [
-				"Designing large integer handling objects",
-				"Designing user interacting command line console"
+				"Architected custom large-integer handling classes to support high-precision RSA calculations.",
+				"Developed an interactive command-line interface for seamless user interaction and key management."
 			],
-			"techStack": [
-				"OOP",
-				"RSA encryption"
-			],
-			"deliverables": "A simple file encryption/decryption program using RSA method, featuring large int handling and the ability to input or generate key pairs"
+			"techStack": ["C++","OOP","RSA Cryptography"],
+			"deliverables": "A functional C++ application capable of generating RSA key pairs and performing secure file encryption and decryption."
 		},
 		{
-			"title": "Blockchain model Implementation",
-			"group": "5 members",
-			"timePeriod": {
-				"from": "November 2023",
-				"to": "December 2023"
-			},
+			"title": "Blockchain Protocol Implementation",
+			"group": "Academic (5 members)",
+			"timePeriod": {"from": "November 2023","to": "December 2023"},
 			"link": "https://github.com/Thehien11/Blockchain_HCMUS",
 			"contribution": [
-				"Implementing Transactions Verification",
-				"Designing front-end user interacting console"
+				"Developed core transaction verification logic and cryptographic validation protocols.",
+				"Designed a robust command-line console for real-time user interaction with the blockchain."
 			],
-			"techStack": [
-				"Golang",
-				"Blockchain"
-			],
-			"deliverables": "A Blockchain Golang program with core functionalities, including adding new transactions, displaying transaction details, validating transactions and creating a new blockchain"
+			"techStack": ["Golang","Blockchain Technology","Cryptography"],
+			"deliverables": "A Go-based blockchain simulation featuring transaction pooling, block validation, and ledger integrity checks."
 		},
 		{
-			"title": "Personal CV builder",
+			"title": "Customizable Personal CV Builder",
 			"group": "Personal",
-			"timePeriod": {
-				"from": "July 12th 2025",
-				"to": "August 19th 2025"
-			},
+			"timePeriod": {"from": "July 12th 2025","to": "August 19th 2025"},
 			"link": "https://github.com/khanh892002/PLQKhanh_Resume",
 			"contribution": [
-				"Frontend designing",
-				"Implement PDF file creation",
-				"Customizable project and work experience selection",
-				"Deploying source code onto Vercel"
+				"Designed a responsive React-based UI with dynamic light and dark mode themes.",
+				"Engineered client-side PDF generation logic allowing users to export tailored resumes.",
+				"Implemented selective data filtering to allow users to toggle specific work experiences and projects."
 			],
-			"techStack": [
-				"Javascript",
-				"React",
-				"HTML",
-				"CSS",
-				"Vercel"
-			],
+			"techStack": ["Javascript","React","HTML","CSS","Vercel"],
 			"deliverables": "plq-khanh-resume.vercel.app"
 		},
 		{
-			"title": "Simple Google searching integration",
+			"title": "Full-Stack Search Engine integration",
 			"group": "Personal",
-			"timePeriod": {
-				"from": "June 9th 2025",
-				"to": "June 14th 2025"
-			},
+			"timePeriod": {"from": "June 9th 2025","to": "June 14th 2025"},
 			"link": "https://github.com/khanh892002/simple-searching-API-integration",
 			"contribution": [
-				"Web and API designing on the frontend with light and dark modes",
-				"Handling request from the frontend and response from SerpAPI",
-				"test cases implementing",
-				"Deploying source code onto Vercel (frontend) and Render (backend)"
+				"Architected the frontend and integrated SerpAPI to fetch and display organic search results.",
+				"Developed a Node.js/Express backend to handle API requests and secure sensitive keys.",
+				"Authored automated unit and integration tests using Jest and Supertest to ensure API reliability."
 			],
-			"techStack": [
-				"Javascript",
-				"NodeJS",
-				"HTML",
-				"CSS",
-				"Jest",
-				"Supertest",
-				"Vercel",
-				"Render"
-			],
-			"deliverables": "A simple Google searching website using SerpAPI to for Google’s engine and displaying organic results with some simple test cases handled on the server side."
+			"techStack": ["Javascript","NodeJS","ExpressJS","Jest","Supertest","Vercel","Render"],
+			"deliverables": "A web platform that integrates external search APIs with high performance and tested server-side logic."
 		},
 		{
-			"title": "Grammar syntax analyzer",
+			"title": "NLP-Powered Grammar Syntax Analyzer",
 			"group": "Personal",
-			"timePeriod": {
-				"from": "May 25th 2026",
-				"to": "June 7th 2026"
-			},
+			"timePeriod": {"from": "May 25th 2026", "to": "June 7th 2026"},
 			"link": "https://github.com/khanh892002/SentenceAnalyzing",
 			"contribution": [
-				"Website designing",
-				"Presenting analyzing results with structured grammar elements",
-				"Deploying app using FireBase and Render"
+				"Designed a React-based interface for visualizing complex linguistic syntax trees.",
+				"Integrated the SpaCy NLP library to parse and categorize structured grammar elements.",
+				"Deployed a multi-service architecture using Firebase for the frontend and Render for the NLP backend."
 			],
-			"techStack": [
-				"Javascript",
-				"NodeJS",
-				"HTML",
-				"CSS",
-				"ReactJS",
-				"FireBase",
-				"Render",
-				"Spacy",
-				"html-to-image"
-			],
-			"deliverables": "https://syntax-analyzer-24163.web.app"
+			"techStack": ["Python","Spacy","NodeJS","ReactJS","FireBase","Render"],
+			"deliverables": "A live NLP tool (syntax-analyzer-24163.web.app) that decomposes sentences into their grammatical components."
 		}
 	],
 	"Skills": {
-		"Programming languages": [
-			"C/C++",
-			"Python",
-			"SQL",
-			"Golang"
-		],
-		"Frontend": [
-			"HTML",
-			"CSS",
-			"React",
-			"Javascript"
-		],
-		"Backend": [
-			"NodeJS",
-			"ExpressJS",
-			"PHP",
-			"SQL"
-		],
-		"Databases": [
-			"Microsoft SQL Server"
-		],
-		"Security/System Tools": [
-			"nmap",
-			"Sliver",
-			"Spiderfoot",
-			"Metasploite",
-			"Invoke-Stealth",
-			"VirtualBox",
-			"WSL"
-		],
-		"Workflow": [
-			"Agile/Scrum",
-			"Git"
-		],
-		"Soft skills": [
-			"Self-learning",
-			"Teamwork",
-			"Analytical thinking",
-			"Problem-solving"
-		],
-		"Other Expertises": [
-			"Mathematics",
-			"Physics",
-			"Prompt Engineering"
-		],
+		"Programming languages": ["C/C++","Python","SQL","Golang"],
+		"Frontend": ["HTML","CSS","React","Javascript"],
+		"Backend": ["NodeJS","ExpressJS","PHP","SQL"],
+		"Databases": ["Microsoft SQL Server"],
+		"Security/System Tools": ["nmap","Sliver","Spiderfoot","Metasploite","Invoke-Stealth","VirtualBox","WSL"],
+		"Workflow": ["Agile/Scrum","Git","Vercel","Render"],
+		"Soft skills": ["Self-learning","Teamwork","Analytical thinking","Problem-solving"],
+		"Other Expertises": ["Mathematics","Physics","Prompt Engineering"]
 	},
 	"LangSkills": {
 		"Vietnamese": "Native",
